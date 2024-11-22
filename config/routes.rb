@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   resources :users, only: :index
   resources :follows, only: [ :create, :destroy ]
+  resources :sleeps, only: [ :index, :create ]
+  resources :wake_ups, only: :create
 end
