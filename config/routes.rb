@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   resources :follows, only: [ :create, :destroy ]
   resources :sleeps, only: [ :index, :create ]
   resources :wake_ups, only: :create
+  namespace :follows do
+    resources :sleeps, only: :index
+  end
 end
