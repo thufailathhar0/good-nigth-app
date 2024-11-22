@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   resources :users, only: :index
+  resources :follows, only: [ :create, :destroy ]
 end
